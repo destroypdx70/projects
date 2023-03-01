@@ -17,3 +17,4 @@ def square_root_v3(x):
     print(f"The square root of {goal} is {result}")
     return result
 
+print(square_root_v3(9))
