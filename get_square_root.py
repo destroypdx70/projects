@@ -1,4 +1,4 @@
-def square_root_v1(x):
+def square_root_v1():
     goal = int(input("Choose a number => "))
     result = 0
 
@@ -10,7 +10,7 @@ def square_root_v1(x):
         print(f"{goal} did not have been found")
     return result
 
-def square_root_v2(x):
+def square_root_v2():
     goal = int(input("Choose a number => "))
     epsilon = 0.01
     step = epsilon**2
@@ -24,7 +24,7 @@ def square_root_v2(x):
         print(f"The square root of {goal} is {result}")
     return result
 
-def square_root_v3(x):
+def square_root_v3():
     goal = int(input("Choose a number => "))
     epsilon = 0.01
     limit = 0.0
@@ -42,8 +42,8 @@ def square_root_v3(x):
 
     print(f"The square root of {goal} is {result}")
     return result
-    
-
-print(square_root_v1(9))
-print(square_root_v2(9))
-print(square_root_v3(9))
+        
+if __name__ == "__main__":
+    square_root_v1()
+    square_root_v2()
+    square_root_v3()
