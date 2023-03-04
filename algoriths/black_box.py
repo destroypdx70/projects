@@ -1,27 +1,32 @@
-import unittest 
+import unittest
 
+def summ(x, y):
+    return x + y
 
-def summ(num_1, num_2):
-    return num_1 + num_2
+def mul(x, y):
+    return x * y
 
-class BlackBoxText(unittest.TestCase):
+class BlackBoxTest(unittest.TestCase):
 
-    def test_sum_two_positives(self):
-        num_1 = 10
-        num_2 = 7
+    def test_sum_positive_numbers(self):
+        self.x = int(input("Write a number => "))
+        self.y = int(input("Write a number => "))
 
-        result = summ(num_1, num_2)
+        result = summ(self.x, self.y)
 
-        self.assertEqual(result, 17)
+        self.assertEqual(result, summ(self.x, self.y))
 
-    def test_sum_two_negatives(self):
-        num_1 = -12
-        num_2 = -12
+    def test_sum_negative_numbers(self):
+        self.x = int(input("Write a number => "))
+        self.y = int(input("Write a number => "))
 
-        result = summ(num_1, num_2)
+        result = mul(self.x, self.y)
 
-        self.assertEqual(result, -24)
+        self.assertEqual(result, mul(self.x, self.y))
 
 if __name__ == "__main__":
     unittest.main()
+
+
+
 

@@ -1,0 +1,57 @@
+import unittest
+
+def mul(x, y):
+    return x * y
+
+class BlackBoxTest(unittest.TestCase):
+    
+    def test_mul_positive_numbers(self):
+        print("New test activate: multiplicate postive numbers")
+        x = int(input("Choose a number => "))
+        y = int(input("Choose a number => "))
+        print(x * y)
+
+        result = mul(x, y)
+
+        self.assertEqual(result, x * y)
+        print(x * y)
+
+    def test_mul_negative_numbers(self):
+        print("New test activate: multiplicate negativeumbers")
+        x = int(input("Choose a number => "))
+        y = int(input("Choose a number => "))
+
+        result = mul(x, y)
+
+        self.assertEqual(result, x * y)
+
+
+def summ(x, y):
+    return x + y
+
+class BlackBoxTest(unittest.TestCase):
+
+    def test_summ_positive_numbers(self):
+        print("New test activate: summ postive numbers")
+        x = int(input("Choose a postive number => "))
+        y = int(input("Choose a positive number => "))
+        print(x + y)
+
+        result = summ(x, y)
+
+        self.assertEqual(result,summ(x, y))
+
+
+    def test_summ_negative_numbers(self):
+        print("New test activate: summ negative numbers")
+        x = int(input("Choose a negative number => "))
+        y = int(input("Choose a negative number => "))
+        print(x + y)
+
+        result = summ(x, y)
+
+        self.assertEqual(result,summ(x, y))
+
+if __name__ == "__main__":
+    unittest.main()
+
